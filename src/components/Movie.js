@@ -1,4 +1,5 @@
 import "./Movie.scss";
+import PosterPlaceholder from "../assets/placeholder.png";
 
 const Movie = ({ movie, searchValue, nominateMovie, nominated }) => {
   let isNominated = false;
@@ -13,7 +14,7 @@ const Movie = ({ movie, searchValue, nominateMovie, nominated }) => {
       {searchValue.length >= 2 ? (
         <li className="movie-row" key={movie.imdbID}>
           <img className="poster"
-            src={movie.Poster !== "N/A" ? movie.Poster : ''}
+            src={movie.Poster !== "N/A" ? movie.Poster : PosterPlaceholder}
             alt={`Movie Poster for ${movie.Title}`}
           />
           <div className="column">
