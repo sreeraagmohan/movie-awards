@@ -1,0 +1,17 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .left-col {
+            flex: 50%;
+        }
+        .right-col {
+            flex: 50%;
+        }
+    }
+}

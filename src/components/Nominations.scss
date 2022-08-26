@@ -1,0 +1,47 @@
+.nominations-wrapper {
+    padding: 8px 16px;
+    .column {
+        flex-direction: column;
+    }
+    .nominee-badge-wrapper {
+        margin: 8px 0;
+    }
+    .selection-span {
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+        border-radius: 6px;
+        background-color: #275eff;
+        padding: 4px 8px;
+    }
+    .nominees-list-item {
+        background-color: white;
+        align-items: center;
+        padding: 20px;
+        margin: 15px 0px 0px -40px;
+        border-radius: 10px;
+        list-style-type: none;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        .nominee-span {
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        .remove-nominee {
+            border-radius: 5px;
+            background-color: #DC3545;
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    }
+    .done-span {
+        border-radius: 6px;
+        background-color: #e86d1c;
+        padding: 4px 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+    }
+}

@@ -1,0 +1,1 @@
+export const API_URL = 'https://www.omdbapi.com/?apikey=342b6dfb&type=movie'

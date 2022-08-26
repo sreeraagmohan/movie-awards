@@ -1,0 +1,46 @@
+.movie-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 15px;
+    margin: 20px 20px 20px 25px;
+    border-radius: 15px;
+    background-color: white;
+  
+    &:hover {
+      background-color: #eeeeee;
+      cursor: pointer;
+    }
+
+    .column {
+        flex-direction: column;
+    }
+
+    .movie-title {
+        font-weight: 600;
+    }
+
+    .poster {
+        height: 120px;
+        width: 80px;
+        margin: 10px;
+        object-fit: cover;
+        border: 1px solid #373737;
+    }
+
+    .nominate-button {  
+        border-radius: 5px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        font-weight: 600;
+        padding: 10px 15px;
+        cursor: pointer;
+        &:disabled {
+          background-color: #f3f3f3;
+          color: lightgray;
+          cursor: not-allowed;
+        }
+    }
+}
