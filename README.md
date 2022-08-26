@@ -1,46 +1,24 @@
-# Getting Started with Create React App
+# Movie Awards
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple app made with React & Jest that queries the OMDB API and allows the user to nominate five of their favourite movies for awards.
 
-## Available Scripts
+# How to Install The Project
+1. Clone the repository 
+2. On terminal, run `npm install` 
+3. Head over to http://www.omdbapi.com/apikey.aspx to get an API key. 
+4. Replace the API key that you've received from OMDB in `constants.js`
+5. On terminal, run `npm run start`
 
-In the project directory, you can run:
+# Running tests
+1. Run `npm run test` to run all the tests in the `__tests__` folder.
+2. To view a coverage report, run `npm run test -- --coverage` to get a coverage report on the terminal. 
 
-### `npm start`
+# How to Use
+1. Search for your favourite movie in the searchbar. The results will appear below the search bar on the left.
+2. Each movie card will have the movie name, the year of release, and a nominate button. 
+3. Click on the nominate button to add your favourite movie to the list of nominees. The user can nominate upto five movies of their choice. 
+4. The nominated movies will appear below the search bar on the right side. 
+5. Click on the remove button to remove a nomination from the nominee list. 
+6. The list of nominees are also stored in your local storage, so that the history is maintained for the next time you use the app. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Questions/Comments? Drop me an [e-mail](mailto:sreeraagmohan@gmail.com)
