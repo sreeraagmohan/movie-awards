@@ -16,16 +16,15 @@ const Home = () => {
     const [nominated, setNominated] = useState([]);
     const [nominatedCount, setNominatedCount] = useState(0);
 
-    const getMovieRequest = debounce(async (searchValue) => {
-        const url = `${API_URL}&s=${searchValue}`;
-        const response = await fetch(url);
-        const responseJson = await response.json();
-        if (responseJson.Search) {
-            setMovies(responseJson.Search);
-        }
-    }, 500);
-
     useEffect(() => {
+        const getMovieRequest = debounce(async (searchValue) => {
+            const url = `${API_URL}&s=${searchValue}`;
+            const response = await fetch(url);
+            const responseJson = await response.json();
+            if (responseJson.Search) {
+                setMovies(responseJson.Search);
+            }
+        }, 500);
         getMovieRequest(searchValue);
     }, [searchValue]);
 
@@ -33,8 +32,8 @@ const Home = () => {
         if (nominated.length > 4) {
             return;
         }
-        setNominatedCount(nominatedCount + 1);
-        setNominated([...nominated, movie]);
+        setNominatedCount(nominatedCount => nominatedCount + 1);
+        setNominated(nominated => [...nominated, movie]);
     };
 
     /* If there are values stored in local storage, push it to the nominated array */
@@ -44,10 +43,11 @@ const Home = () => {
             arrayOfValues.forEach((movie) => {
                 let storedMovies = JSON.parse(movie);
                 nominated.push(storedMovies);
-                setNominated(nominated);
-                setNominatedCount(nominatedCount + nominated.length);
+                setNominated(nominated => nominated);
+                setNominatedCount(nominatedCount => nominatedCount + nominated.length);
             });
         }
+    // eslint-disable-next-line
     }, []);
 
     /* Add movies to local storage so that the user can start from there if tab is closed */
@@ -62,7 +62,7 @@ const Home = () => {
 
     const removeNomination = (movie) => {
         localStorage.removeItem(movie.imdbID);
-        setNominatedCount(nominatedCount - 1);
+        setNominatedCount(nominatedCount => nominatedCount - 1);
         //removes from nominated array
         let updatedArray = [...nominated];
         updatedArray.splice(
@@ -75,10 +75,10 @@ const Home = () => {
     return (
         <div data-testid="home" className="home">
             <Header />
-            <Search searchValue={searchValue} setSearchValue={setSearchValue} />            
+            <Search searchValue={searchValue} setSearchValue={setSearchValue} />
             <div className="row">
                 <div className="left-col">
-                    <SearchResults 
+                    <SearchResults
                         movies={movies}
                         searchValue={searchValue}
                         nominateMovie={nominateMovie}
@@ -86,7 +86,7 @@ const Home = () => {
                     />
                 </div>
                 <div className="right-col">
-                    <Nominations 
+                    <Nominations
                         nominated={nominated}
                         removeNomination={removeNomination}
                         nominatedCount={nominatedCount}
