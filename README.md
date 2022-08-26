@@ -1,6 +1,6 @@
 # Movie Awards
 
-A simple app made with React & Jest that queries the OMDB API and allows the user to nominate five of their favourite movies for awards.
+A simple app made with React & Jest that queries the <a href="https://www.omdbapi.com/">OMDB API</a> and allows the user to nominate five of their favourite movies for awards.
 
 ## How to Install The Project
 1. Clone the repository 
