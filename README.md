@@ -2,6 +2,8 @@
 
 A simple app made with React & Jest that queries the <a href="https://www.omdbapi.com/">OMDB API</a> and allows the user to nominate five of their favourite movies for awards.
 
+<a href="https://sreeraag-movie-awards.netlify.app/">Live Demo</a>
+
 ## How to Install The Project
 1. Clone the repository 
 2. On terminal, run `npm install` 
